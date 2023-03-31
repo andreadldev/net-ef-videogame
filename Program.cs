@@ -62,6 +62,8 @@ while (true)
 
                 if (vg == null)
                 {
+                    Console.WriteLine("Nessun risultato trovato");
+                    Console.WriteLine();
                     break;
                 }
                 Console.WriteLine($"Dettagli: {vg.Name} \n{vg.Overview} \n{vg.ReleaseDate}");
