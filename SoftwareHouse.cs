@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace net_ef_videogame
     [Table("software_houses")]
     public class SoftwareHouse
     {
-        public long Id { get; set;  }
+        [Key]
+        public long SoftwareHouseId { get; set;  }
         public string Name { get; set; }
 
         public List<Videogame> Videogames { get; set; }
