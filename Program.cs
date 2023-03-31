@@ -10,7 +10,8 @@ while (true)
         Console.WriteLine("Menù");
         Console.WriteLine("1. Inserisci videogioco");
         Console.WriteLine("2. Inserisci software house");
-        Console.WriteLine("3. Esci");
+        Console.WriteLine("3. Ricerca gioco per id");
+        Console.WriteLine("4. Esci");
         var input = Console.ReadLine();
         opzione = Menu(input);
     }
@@ -53,6 +54,20 @@ while (true)
             Console.WriteLine();
             break;
         case 3:
+            Console.WriteLine("Inserisci l'ID del gioco");
+            var gameID = Convert.ToInt64(Console.ReadLine());
+            using (VideogameContext db = new VideogameContext())
+            {
+                Videogame vg = db.Videogames.FirstOrDefault(vg => vg.Id == gameID);
+
+                if (vg == null)
+                {
+                    break;
+                }
+                Console.WriteLine($"Dettagli: {vg.Name} \n{vg.Overview} \n{vg.ReleaseDate}");
+            }
+            break;
+        case 4:
             Environment.Exit(0);
             break;
             //case 4:
@@ -73,11 +88,11 @@ int Menu(string? input)
         case "inserisci software house":
             return 2;
         case "3":
+            return 3;
+        case "4":
         case "esci":
         case "exit":
-            return 3;
-        //case "4":
-        //    return 4;
+            return 4;
         //case "5":
         //    return 5;
         default:
