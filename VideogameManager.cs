@@ -15,8 +15,8 @@ namespace net_ef_videogame
             connStr = "Data Source=localhost;Initial Catalog=net-ef-videogame;Integrated Security=True;TrustServerCertificate=True";
         }
 
-        public void AddGame(Videogame videogame)
-        {
+        //public void AddGame(Videogame videogame)
+        //{
             //using (SqlConnection conn = new SqlConnection(connStr))
             //{
             //    try
@@ -36,7 +36,7 @@ namespace net_ef_videogame
             //        Console.WriteLine(ex.ToString());
             //    }
             //}
-        }
+        //}
 
         //public Videogame? SearchById(long id)
         //{
