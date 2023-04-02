@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace net_ef_videogame
+namespace net_ef_videogame.Classes
 {
     [Table("videogames")]
     public class Videogame

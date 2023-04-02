@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace net_ef_videogame
+namespace net_ef_videogame.Classes
 {
     public static class GameManager
     {
@@ -123,7 +123,7 @@ namespace net_ef_videogame
                     }
                     Console.WriteLine($"Dettagli: {vg.Name} \n{vg.Overview} \n{vg.ReleaseDate}");
                     Console.WriteLine("Sei sicuro di voler eliminare questo gioco? (s/n)");
-                
+
                     var input = Console.ReadLine();
                     switch (input)
                     {

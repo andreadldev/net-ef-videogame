@@ -1,5 +1,4 @@
-﻿using net_ef_videogame;
-
+﻿using net_ef_videogame.Classes;
 
 while (true)
 {
